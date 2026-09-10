@@ -13,3 +13,4 @@ if __name__ == "__main__":
     main()
 
 print("This is a sample Python script.")
+print("This is a sample Python script.")
