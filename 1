@@ -1,0 +1,22 @@
+score = 0
+ 
+def add_points(points):
+    score = 0
+    # FAULT: Python treats 'score' as a new local variable because we are assigning to it,
+    # but it hasn't been initialized inside this function yet.
+    score = score + points 
+    return score
+ 
+add_points(10)
+
+
+def get_fibonacci(n):
+    # FAULT: This calculates the same branches repeatedly.
+    # It is O(2^n) time complexity.
+    if n <= 1:
+        return n
+    return get_fibonacci(n-1) + get_fibonacci(n-2)
+ 
+# This will take an excruciatingly long time to compute
+# this function calls itself over 330 million times for n=40
+print(get_fibonacci(40))
